@@ -12,5 +12,7 @@ for ($i = 0; $arr[$i][0]; $i++){
 	}
 }
 sort($arr2);
-print_r($arr2);
+foreach ($arr2 as $item){
+	echo $item, PHP_EOL;
+}
 ?>
