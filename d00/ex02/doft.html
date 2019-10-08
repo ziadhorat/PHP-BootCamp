@@ -2,22 +2,45 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="doft.css">
 	<title>Day of the 42</title>
+	<link rel="stylesheet" href="doft.css">
 </head>
-<body style="background-color:#505050">
-	<div class="header">
-		<img class="doft" src="resources/day_of_the_42.png" width="450" height="150">
-		<a href="https://www.disney.com"><img class="rel" title="Start from the begining" src="resources/reload.png" width="20px" height="20px"></a>
-		<a href="https://www.relaischateaux.com"><img class="close" title="Disconnect" src="resources/close.gif"></a>
-		<img class="loupe" src="resources/loupe.png" width="250" height="150">
-	</div>
-	<div class="flex-container">
-		<div class="side">1</div>
-		<div class="mid">2</div>
-		<div class="side">3</div>
+<body>
+	<div class="mid">
+		<div class="header">
+			<img src="./resources/day_of_the_42.png" alt="day_of_the_42" class="dotf">
+			<img src="./resources/loupe.png" alt="magfam" class="loupe">
+			<a href="https://www.disney.com"><img src="./resources/reload.png" alt="reload" class="rel" title="Start from the beginnig"></a>
+			<a href="https://www.relaischateaux.com"><img src="./resources/close.gif" alt="close" class="close" title="Disconnect"></a>
+		</div>
+		<div class="flex-container">
+			<div class="side">
+				<img src="./resources/arrow.png" alt="Advance" title="Advance">
+				<img src="./resources/main.png" alt="Take" title="Take">
+				<img src="./resources/oeil.png" alt="Look" title="Look" class="look">
+				<img src="./resources/outil.png" alt="Use" title="Use">
+				<img src="./resources/chat-icon.png" alt="Speak" title="Speak">
+			</div>
+			<div class="centre">
+				<img src="./resources/cluster.jpg" alt="cluster" class="clus" usemap="#map">
+				<map name="map">
+					<area shape="rect" coords="300, 390, 450, 670" href="http://www.ikea.com" alt="ikea" title="ikea">
+					<area shape="rect" coords="760, 380, 950, 590" href="http://www.apple.com" alt="apple" title="apple">
+				</map>
+			</div>
+			<div class="side">
+				<img src="./resources/book.png" alt="book" title="Book" class="book">
+				<img src="./resources/towel.png" alt="towel" title="Towel" class="towel">
+				<div class="brick" title="brick"></div>
+			</div>
+		</div>
+		<form>
+			<p>You <span class="bigger">enter</span> a large room filled with</p>
+			<p class="comp">computers...</p>
+			<p>- <em>Hello, are you new here?</em></p>
+			<input type="text" class="tb">
+			<input type="submit" class="bt" value="Answer">
+		</form>
 	</div>
 </body>
 </html>
