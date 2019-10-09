@@ -2,6 +2,10 @@
 <?php
 if ($argc > 1){
 	$my_file = $argv[1];
+	if (!file_exists($my_file)){
+		echo "Unable to open file!\n";
+		return 0;
+	}
 	$handle = fopen($my_file, 'r');
 	$data = fread($handle,999999);
 	$title = 0; //Title
@@ -12,6 +16,8 @@ if ($argc > 1){
 			$state = 1; //Starting					0->1
 		if ($state == 1 && $data[$i - 1] == '>')
 			$state = 2;	//Start in between <>		1->2
+		if (($state == 1) && ($data[$i] == '>'))
+				$state = 2; //Begin betwee<>
 		if ($data[$i] == '<' && $state == 2)
 			$state = 1; //After in between <>		2->1
 		if (($data[$i] == '/') && ($data[$i+1] == 'a') && ($data[$i+2] == '>'))

@@ -7,6 +7,6 @@ if ($argc > 1){
 	$arr[count($arr)] = $temp;
 	for ($i = 1; $i <= count($arr); $i++)
 		$str = $str . " " . $arr[$i];
-	echo (trim($str));
+	echo (trim($str)) . PHP_EOL;
 }
 ?>
