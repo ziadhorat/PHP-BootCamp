@@ -12,7 +12,7 @@ if ($argc > 1){
 	$text = 0; //Text
 	$state = 0; //State 0 =    1 = <a    2 = capitalize
 	for ($i = 0; $i < filesize($my_file); $i++){
-		if (($data[$i] == '<') && ($data[$i+1] == 'a') && ($data[$i+2] == ' '))
+		if (($data[$i] == '<') && ($data[$i+1] == 'a'))
 			$state = 1; //Starting					0->1
 		if ($state == 1 && $data[$i - 1] == '>')
 			$state = 2;	//Start in between <>		1->2
