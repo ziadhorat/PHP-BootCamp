@@ -7,7 +7,6 @@
 	if (!file_exists($dir))
 		mkdir($dir);
 	preg_match_all('|<img .*?src=[\'"](.*?)[\'"].*?>|i', $html, $matches);
-	print_r($matches);
 	foreach($matches[1] as $link) {
 		$img = substr($link, strrpos($link, "/"));
 		if (!strncmp($link, "http", 4))
