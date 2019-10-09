@@ -1,8 +1,22 @@
-#!/usr/bin/env php
+#!/usr/bin/php
 <?php
-$url_to_image = 'https://www.42.fr/';
-$my_save_dir = './';
-$filename = basename($url_to_image);
-$complete_save_loc = $my_save_dir . $filename;
-file_put_contents($complete_save_loc, file_get_contents($url_to_image));
+	if ($argc != 2)
+		exit();
+	$html = file_get_contents($argv[1]);
+	$dir = parse_url($argv[1], PHP_URL_HOST);
+	if (!file_exists($dir))
+		mkdir($dir);
+	preg_match_all('|<img .*?src=[\'"](.*?)[\'"].*?>|i', $html, $matches);
+	print_r($matches);
+	foreach($matches[1] as $link) {
+		$img = substr($link, strrpos($link, "/"));
+		if (!strncmp($link, "http", 4))
+			copy($link, $dir."/".$img);
+		elseif (!strncmp($link, "/", 1))
+			copy($argv[1].$link, $dir."/".$img);
+		elseif (!strncmp($link, "./", 2))
+			copy($argv[1].ltrim($link, '.'), $dir."/".$img);
+		else
+			copy($argv[1]."/".$link, $dir."/".$img);
+	}
 ?>
