@@ -37,7 +37,7 @@
 			$i = 1;
 			foreach ($data as $item)
 			{
-				echo $i ."\n" . $item['Time'] . $item['Text'] . "\n\n";
+				echo $i ."\n" . $item['Time'] . $item['Text'] . "\n";
 				$i ++;
 			}
 		}
