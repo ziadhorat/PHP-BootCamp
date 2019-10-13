@@ -44,8 +44,9 @@ body{
 	padding: 1em 1em;
 	text-decoration: none;
 	width:9%;
-	height:10%;
+	height:8%%;
 	display: inline-block;
+	float:right;
 }
 
 
@@ -79,3 +80,7 @@ input[type=submit] {
 input[type=submit]:hover {
 	background-color: #45a049;
   }
+.loginicon{
+	float:right;
+	padding-right:2%;
+}
