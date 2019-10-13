@@ -36,10 +36,10 @@
 					echo '	<form action="includes/logout.inc.php" method="post">
 								<input  class="loginicon" type="image" name="logout-submit" src="images/logout.png" alt="Logout">
 							</form>
-							<form action="includes/cart.php" method="post">
+							<form action="cart.php" method="post">
 								<input class="loginicon" type="image" name="cart-submit" src="images/cart.png" alt="Cart">
 							</form>
-							<form action="includes/profile.php" method="post">
+							<form action="profile.php" method="post">
 								<input class="loginicon" type="image" name="user-submit" src="images/user.png" alt="User">
 							</form>';
 				else
